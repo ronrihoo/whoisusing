@@ -25,7 +25,7 @@ The output is the name of the user.
 
 Options:
 
-`-p` : Return users with PIDs
+`-p` : Return users with their associated PIDs
 
 ```
 $ whoisusing mysql -p
