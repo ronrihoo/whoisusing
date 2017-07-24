@@ -31,7 +31,7 @@ Options:
 $ whoisusing mysql -p
 mysql   1412
 ```
-Similar to `ps aux | awk '{ print $1,  $2 }' | grep mysql` with the difference being that all of associated PIDs of each unique user are listed on the same line, like so:
+Similar to `ps aux | awk '{ print $1,  $2 }' | grep mysql` with the difference being that all of the associated PIDs of each unique user are listed on the same line, like so:
 
 ```
 $ whoisusing mysql -p
