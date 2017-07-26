@@ -39,7 +39,7 @@ The actual filenames retrieved for each user are separated from each other by a 
 
 `-s` : Returns only the results that have matching filenames
 
-Notice the actual name above for user `lp` is too different from the searched name `cups`. In order to prevent this, the strict option flag, `-s`, will ensure that the associated filenames are a close match to the searched named.
+Notice the actual name above for user `lp` is too different from the searched name `cups`. In order to prevent this, the strict option flag, `-s`, will ensure that the associated filenames are a close match to the searched name.
 
 ```
 whoisusing cups -s
