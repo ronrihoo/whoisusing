@@ -101,7 +101,7 @@ mysql     1412  0  1.5 1253291 156937 ?      Ssl  00:20   0:01 /usr/sbin/mysqld
 
 mysql
 ```
-The line returned is the output of `ps aux | grep mysql`. In case of multiple results, first all of the lines will be printed in the same respective order as the user names which follow.
+The line returned is exactly similar to the output of `ps aux | grep mysql`. In case of multiple results, first all of the lines will be printed in the same respective order as the user names which follow.
 
 
 ## Removal
