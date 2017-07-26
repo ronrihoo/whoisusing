@@ -34,7 +34,7 @@ root	cupsd cups-browsed
 lp	dbus
 ```
 
-All of the actual names for each user are separated from each other by a space.
+The actual filenames retrieved for each user are separated from each other by a space.
 
 
 `-s` : Returns only the results that have matching filenames
@@ -59,7 +59,7 @@ root	cupsd
 $ whoisusing mysql -p
 mysql   1412
 ```
-Similar to `ps aux | awk '{ print $1,  $2 }' | grep mysql` with the difference being that all of the associated PIDs of each unique user are listed on the same line, like so:
+Similar to `ps aux | grep mysql | awk '{ print $1,  $2 }'` with the difference being that all of the associated PIDs of each unique user are listed on the same line, like so:
 
 ```
 $ whoisusing mysql -p
