@@ -149,14 +149,14 @@ $ find / -name "whoisusing" 2>/dev/null
 /usr/local/bin/whoisusing-1.0/whoisusing
 ```
 
-Find and run the `remove.sh` script.
+From the found directory, run the `remove.sh` script using `sudo`.
+
 
 ## Remarks
 
-In general, `whoisusing` requires a lot of work; although, it does its job as a quick CLI tool. There is more to be desired, but it's not bad for a half hour's worth of coding.
+In general, `whoisusing` requires more work, as there is more to be desired. However, it does its job as a quick CLI tool.
 
 ## Contributing
 
 All pull requests are welcome. 
-
 
