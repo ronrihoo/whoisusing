@@ -25,6 +25,37 @@ The output is the name of the user.
 
 Options:
 
+<<<<<<< HEAD
+
+`-a` : Return the actual filename associated with found processes
+
+```
+$ whoisusing cups -a
+root	cupsd cups-browsed 
+lp	dbus
+```
+
+All of the actual names for each user are separated from each other by a space.
+
+
+`-s` : Returns only the results that have matching filenames
+
+Notice the actual name above for user `lp` is too different from the searched name `cups`. In order to prevent this, the strict option flag, `-s`, will ensure that the associated filenames are a close match to the searched named.
+
+```
+whoisusing cups -s
+root
+```
+Additionally, one may combine options for more detailed results, like so:
+
+```
+$ whoisusing cups -sa
+root	cupsd 
+```
+
+
+=======
+>>>>>>> eb3e75258bda60b76331f43749aae9a4ba8fa54b
 `-p` : Return users with their associated PIDs
 
 ```
@@ -41,11 +72,38 @@ mysql   1412 1413
 -where the latter would display:
 
 ```
+<<<<<<< HEAD
+$ ps aux | grep mysql | awk '{ print $1,  $2 }'
+mysql 1412
+mysql 1413
+```
+
+`-d` : Return the directories associated with the user who's using the specified process
+
+```
+$ whoisusing cups -d
+root	/usr/sbin/cupsd /usr/sbin/cups-browsed 
+lp	/usr/lib/cups/notifier/dbus 
+```
+
+This can be combined with other options.
+
+```
+$ whoisusing cups -apd
+root	cupsd 3703 cups-browsed 3704 
+	/usr/sbin/cupsd /usr/sbin/cups-browsed 
+lp	dbus 3712 
+	/usr/lib/cups/notifier/dbus 
+```
+
+
+=======
 $ sudo ps aux | awk '{ print $1,  $2 }' | grep mysql
 mysql   1412
 mysql   1413
 ```
 
+>>>>>>> eb3e75258bda60b76331f43749aae9a4ba8fa54b
 `-l` : Return the lines that were used to determine who the users are
 
 ```
@@ -56,6 +114,10 @@ mysql
 ```
 The line returned is the output of `ps aux | grep mysql`. In case of multiple results, first all of the lines will be printed in the same respective order as the user names which follow.
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> eb3e75258bda60b76331f43749aae9a4ba8fa54b
 ## Removal
 
 Using terminal, run the following command:
@@ -64,7 +126,17 @@ Using terminal, run the following command:
 $ sudo /usr/local/bin/whoisusing-1.0/remove.sh
 ```
 
+<<<<<<< HEAD
+If `whoisusing` was placed somewhere else, then one may use the `--whereami` option to find where it is.
+
+```
+$ whoisusing --whereami
+```
+
+This is the same as the following command:
+=======
 If `whoisusing` was placed somewhere else, then find out where it is:
+>>>>>>> eb3e75258bda60b76331f43749aae9a4ba8fa54b
 
 ```
 $ whereis whoisusing
@@ -76,10 +148,23 @@ A directory should be returned, like so:
 whoisusing: /usr/local/bin/whoisusing
 ```
 
+<<<<<<< HEAD
+If that fails, then an additional method of finding `whoisusing` has been provided with the `--findme` flag.
+
+```
+$ whoisusing --findme
+```
+
+This is the same as invoking the command:
+
+```
+$ find / -name "whoisusing" 2>/dev/null
+=======
 If that fails, then one may try other means of searching for the filename, such as:
 
 ```
 $ sudo find / -name "whoisusing" 2>/dev/null
+>>>>>>> eb3e75258bda60b76331f43749aae9a4ba8fa54b
 ```
 
 -from which one would normally expect to receive the following result:
@@ -99,3 +184,7 @@ In general, `whoisusing` requires a lot of work; although, it does its job as a 
 
 All pull requests are welcome. 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> eb3e75258bda60b76331f43749aae9a4ba8fa54b
